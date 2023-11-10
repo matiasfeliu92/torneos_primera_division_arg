@@ -1,0 +1,219 @@
+,nombre_torneo,equipo,PJ,GF,GC,puntos
+0,Liga Profesional Argentina 2017,Boca Juniors,30,62,25,63
+1,Liga Profesional Argentina 2017,River Plate,30,51,28,56
+2,Liga Profesional Argentina 2017,Estudiantes,30,46,26,56
+3,Liga Profesional Argentina 2017,Racing Club,30,51,40,55
+4,Liga Profesional Argentina 2017,Banfield,30,42,35,54
+5,Liga Profesional Argentina 2017,Independient,30,39,23,53
+6,Liga Profesional Argentina 2017,San Lorenzo,30,46,35,53
+7,Liga Profesional Argentina 2017,Lanús,30,36,25,50
+8,Liga Profesional Argentina 2017,Newell's,30,40,30,49
+9,Liga Profesional Argentina 2017,Defensa,30,31,23,49
+10,Liga Profesional Argentina 2017,Colón,30,32,25,49
+11,Liga Profesional Argentina 2017,Rosario,30,40,31,44
+12,Liga Profesional Argentina 2017,Gimnasia,30,26,24,43
+13,Liga Profesional Argentina 2017,Godoy Cruz,30,34,34,43
+14,Liga Profesional Argentina 2017,Talleres,30,35,30,42
+15,Liga Profesional Argentina 2017,Olimpo,30,37,32,38
+16,Liga Profesional Argentina 2017,Atletico,30,31,30,37
+17,Liga Profesional Argentina 2017,Temperley,30,30,38,37
+18,Liga Profesional Argentina 2017,Vélez,30,31,40,37
+19,Liga Profesional Argentina 2017,Patronato,30,30,40,34
+20,Liga Profesional Argentina 2017,Atl.Tucumán,30,34,40,33
+21,Liga Profesional Argentina 2017,Martín Juan,30,27,40,33
+22,Liga Profesional Argentina 2017,Unión Santa,30,25,39,32
+23,Liga Profesional Argentina 2017,Tigre,30,33,43,31
+24,Liga Profesional Argentina 2017,CA Huracán,30,23,30,29
+25,Liga Profesional Argentina 2017,Sarmiento,30,31,51,28
+26,Liga Profesional Argentina 2017,Arsenal,30,27,50,27
+27,Liga Profesional Argentina 2017,Belgrano,30,21,34,26
+28,Liga Profesional Argentina 2017,Quilmes,30,18,43,25
+29,Liga Profesional Argentina 2017,Aldosivi,30,15,40,25
+30,Liga Profesional Argentina 2018,Boca Juniors,27,50,22,58
+31,Liga Profesional Argentina 2018,Godoy Cruz,27,45,24,56
+32,Liga Profesional Argentina 2018,San Lorenzo,27,31,20,50
+33,Liga Profesional Argentina 2018,CA Huracán,27,35,24,48
+34,Liga Profesional Argentina 2018,Talleres,27,33,20,46
+35,Liga Profesional Argentina 2018,Independient,27,29,19,46
+36,Liga Profesional Argentina 2018,Racing Club,27,46,32,45
+37,Liga Profesional Argentina 2018,River Plate,27,39,26,45
+38,Liga Profesional Argentina 2018,Defensa,27,41,34,44
+39,Liga Profesional Argentina 2018,Unión Santa,27,33,23,43
+40,Liga Profesional Argentina 2018,Colón,27,32,22,41
+41,Liga Profesional Argentina 2018,Argentinos,27,36,30,41
+42,Liga Profesional Argentina 2018,Belgrano,27,29,28,40
+43,Liga Profesional Argentina 2018,Vélez,27,31,32,38
+44,Liga Profesional Argentina 2018,Atl.Tucumán,27,29,26,36
+45,Liga Profesional Argentina 2018,Estudiantes,27,25,26,36
+46,Liga Profesional Argentina 2018,Banfield,27,27,24,35
+47,Liga Profesional Argentina 2018,Martín Juan,27,30,36,33
+48,Liga Profesional Argentina 2018,Patronato,27,26,32,33
+49,Liga Profesional Argentina 2018,Rosario,27,30,41,32
+50,Liga Profesional Argentina 2018,Lanús,27,20,37,29
+51,Liga Profesional Argentina 2018,Newell's,27,23,28,27
+52,Liga Profesional Argentina 2018,Gimnasia,27,28,43,27
+53,Liga Profesional Argentina 2018,Tigre,27,26,33,24
+54,Liga Profesional Argentina 2018,Temperley,27,22,46,23
+55,Liga Profesional Argentina 2018,Chacarita,27,23,40,18
+56,Liga Profesional Argentina 2018,Arsenal,27,19,36,17
+57,Liga Profesional Argentina 2018,Olimpo,27,16,50,15
+58,Liga Profesional Argentina 2019,Racing Club,25,43,16,57
+59,Liga Profesional Argentina 2019,Defensa,25,33,18,53
+60,Liga Profesional Argentina 2019,Boca Juniors,25,42,18,51
+61,Liga Profesional Argentina 2019,River Plate,25,42,21,45
+62,Liga Profesional Argentina 2019,Atl.Tucumán,25,36,29,42
+63,Liga Profesional Argentina 2019,Vélez,25,34,25,40
+64,Liga Profesional Argentina 2019,Independient,25,35,28,38
+65,Liga Profesional Argentina 2019,Unión Santa,25,29,24,36
+66,Liga Profesional Argentina 2019,Tigre,25,39,42,36
+67,Liga Profesional Argentina 2019,CA Huracán,25,28,28,35
+68,Liga Profesional Argentina 2019,Lanús,25,27,32,34
+69,Liga Profesional Argentina 2019,Talleres,25,25,24,33
+70,Liga Profesional Argentina 2019,Aldosivi,25,21,24,33
+71,Liga Profesional Argentina 2019,Godoy Cruz,25,23,30,32
+72,Liga Profesional Argentina 2019,Newell's,25,26,23,29
+73,Liga Profesional Argentina 2019,Banfield,25,27,31,29
+74,Liga Profesional Argentina 2019,Estudiantes,25,21,25,29
+75,Liga Profesional Argentina 2019,Gimnasia,25,21,32,29
+76,Liga Profesional Argentina 2019,Patronato,25,29,37,26
+77,Liga Profesional Argentina 2019,Rosario,25,16,26,26
+78,Liga Profesional Argentina 2019,Martín Juan,25,24,34,25
+79,Liga Profesional Argentina 2019,Belgrano,25,16,23,24
+80,Liga Profesional Argentina 2019,San Lorenzo,25,21,30,23
+81,Liga Profesional Argentina 2019,Colón,25,21,33,23
+82,Liga Profesional Argentina 2019,Martín,25,25,38,23
+83,Liga Profesional Argentina 2019,Argentinos,25,15,28,22
+84,Liga Profesional Argentina 2020,Boca Juniors,23,35,8,48
+85,Liga Profesional Argentina 2020,River Plate,23,41,18,47
+86,Liga Profesional Argentina 2020,Vélez,23,27,14,39
+87,Liga Profesional Argentina 2020,Racing Club,23,28,23,39
+88,Liga Profesional Argentina 2020,Argentinos,23,22,17,39
+89,Liga Profesional Argentina 2020,Defensa,23,26,18,36
+90,Liga Profesional Argentina 2020,Lanús,23,32,29,36
+91,Liga Profesional Argentina 2020,San Lorenzo,23,32,30,36
+92,Liga Profesional Argentina 2020,Rosario,23,31,29,36
+93,Liga Profesional Argentina 2020,Newell's,23,33,25,35
+94,Liga Profesional Argentina 2020,Arsenal,23,37,32,34
+95,Liga Profesional Argentina 2020,Talleres,23,34,30,34
+96,Liga Profesional Argentina 2020,Estudiantes,23,23,22,30
+97,Liga Profesional Argentina 2020,Independient,23,27,25,29
+98,Liga Profesional Argentina 2020,Atl.Tucumán,23,22,25,29
+99,Liga Profesional Argentina 2020,Unión Santa,23,21,30,27
+100,Liga Profesional Argentina 2020,Banfield,23,19,23,26
+101,Liga Profesional Argentina 2020,Central,23,21,29,26
+102,Liga Profesional Argentina 2020,Gimnasia,23,22,23,23
+103,Liga Profesional Argentina 2020,Patronato,23,22,34,23
+104,Liga Profesional Argentina 2020,CA Huracán,23,17,27,22
+105,Liga Profesional Argentina 2020,Aldosivi,23,20,35,22
+106,Liga Profesional Argentina 2020,Colón,23,17,39,18
+107,Liga Profesional Argentina 2020,Godoy Cruz,23,22,46,18
+108,Liga Profesional Argentina 2021,River Plate,25,53,19,54
+109,Liga Profesional Argentina 2021,Defensa,25,43,24,47
+110,Liga Profesional Argentina 2021,Talleres,25,38,28,46
+111,Liga Profesional Argentina 2021,Boca Juniors,25,35,19,41
+112,Liga Profesional Argentina 2021,Vélez,25,34,21,39
+113,Liga Profesional Argentina 2021,Estudiantes,25,43,31,39
+114,Liga Profesional Argentina 2021,Colón,25,26,31,39
+115,Liga Profesional Argentina 2021,CA Huracán,25,28,25,38
+116,Liga Profesional Argentina 2021,Independient,25,27,24,38
+117,Liga Profesional Argentina 2021,Lanús,25,44,43,37
+118,Liga Profesional Argentina 2021,Gimnasia,25,27,28,36
+119,Liga Profesional Argentina 2021,Unión Santa,25,32,32,34
+120,Liga Profesional Argentina 2021,Aldosivi,25,29,39,33
+121,Liga Profesional Argentina 2021,Argentinos,25,26,25,32
+122,Liga Profesional Argentina 2021,Racing Club,25,24,23,32
+123,Liga Profesional Argentina 2021,Rosario,25,39,41,32
+124,Liga Profesional Argentina 2021,Godoy Cruz,25,35,33,31
+125,Liga Profesional Argentina 2021,Platense,25,36,36,31
+126,Liga Profesional Argentina 2021,Newell's,25,24,32,28
+127,Liga Profesional Argentina 2021,Banfield,25,20,25,27
+128,Liga Profesional Argentina 2021,San Lorenzo,25,23,33,27
+129,Liga Profesional Argentina 2021,Central,25,30,36,26
+130,Liga Profesional Argentina 2021,Patronato,25,23,35,25
+131,Liga Profesional Argentina 2021,Sarmiento,25,23,33,24
+132,Liga Profesional Argentina 2021,Atl.Tucumán,25,22,46,22
+133,Liga Profesional Argentina 2021,Arsenal,25,12,34,21
+134,Liga Profesional Argentina 2022,Boca Juniors,27,34,28,52
+135,Liga Profesional Argentina 2022,Racing Club,27,41,24,50
+136,Liga Profesional Argentina 2022,River Plate,27,43,22,47
+137,Liga Profesional Argentina 2022,CA Huracán,27,35,21,47
+138,Liga Profesional Argentina 2022,Atl.Tucumán,27,32,22,46
+139,Liga Profesional Argentina 2022,San Lorenzo,27,33,23,43
+140,Liga Profesional Argentina 2022,Tigre,27,41,32,43
+141,Liga Profesional Argentina 2022,Argentinos,27,33,24,42
+142,Liga Profesional Argentina 2022,Gimnasia,27,26,18,41
+143,Liga Profesional Argentina 2022,Patronato,27,31,27,40
+144,Liga Profesional Argentina 2022,Newell's,27,26,22,40
+145,Liga Profesional Argentina 2022,Defensa,27,29,27,40
+146,Liga Profesional Argentina 2022,Talleres,27,28,26,35
+147,Liga Profesional Argentina 2022,Independient,27,31,31,35
+148,Liga Profesional Argentina 2022,Godoy Cruz,27,25,29,35
+149,Liga Profesional Argentina 2022,Central,27,34,37,34
+150,Liga Profesional Argentina 2022,Barracas,27,31,37,34
+151,Liga Profesional Argentina 2022,Estudiantes,27,28,40,33
+152,Liga Profesional Argentina 2022,Platense,27,23,25,32
+153,Liga Profesional Argentina 2022,Rosario,27,24,28,32
+154,Liga Profesional Argentina 2022,Sarmiento,27,27,32,32
+155,Liga Profesional Argentina 2022,Unión Santa,27,28,36,32
+156,Liga Profesional Argentina 2022,Arsenal,27,28,29,30
+157,Liga Profesional Argentina 2022,Banfield,27,23,29,30
+158,Liga Profesional Argentina 2022,Colón,27,24,36,29
+159,Liga Profesional Argentina 2022,Vélez,27,30,33,28
+160,Liga Profesional Argentina 2022,Lanús,27,22,40,21
+161,Liga Profesional Argentina 2022,Aldosivi,27,16,48,16
+162,Liga Profesional Argentina 2023,River Plate,27,50,20,61
+163,Liga Profesional Argentina 2023,Talleres,27,42,23,50
+164,Liga Profesional Argentina 2023,San Lorenzo,27,23,13,46
+165,Liga Profesional Argentina 2023,Lanús,27,38,27,45
+166,Liga Profesional Argentina 2023,Estudiantes,27,35,24,45
+167,Liga Profesional Argentina 2023,Defensa,27,36,23,44
+168,Liga Profesional Argentina 2023,Boca Juniors,27,33,24,44
+169,Liga Profesional Argentina 2023,Rosario,27,36,29,42
+170,Liga Profesional Argentina 2023,Godoy Cruz,27,37,32,41
+171,Liga Profesional Argentina 2023,Argentinos,27,31,22,40
+172,Liga Profesional Argentina 2023,Atl.Tucumán,27,25,27,37
+173,Liga Profesional Argentina 2023,Racing Club,27,36,35,36
+174,Liga Profesional Argentina 2023,Belgrano,27,20,26,36
+175,Liga Profesional Argentina 2023,Newell's,27,24,24,35
+176,Liga Profesional Argentina 2023,Barracas,27,25,30,35
+177,Liga Profesional Argentina 2023,Tigre,27,27,29,34
+178,Liga Profesional Argentina 2023,Platense,27,26,29,34
+179,Liga Profesional Argentina 2023,Instituto,27,24,35,32
+180,Liga Profesional Argentina 2023,Sarmiento,27,23,26,30
+181,Liga Profesional Argentina 2023,Unión Santa,27,19,25,30
+182,Liga Profesional Argentina 2023,Banfield,27,21,32,30
+183,Liga Profesional Argentina 2023,Gimnasia,27,24,38,30
+184,Liga Profesional Argentina 2023,Central,27,20,30,29
+185,Liga Profesional Argentina 2023,Independient,27,23,32,28
+186,Liga Profesional Argentina 2023,Vélez,27,24,27,27
+187,Liga Profesional Argentina 2023,CA Huracán,27,18,29,25
+188,Liga Profesional Argentina 2023,Colón,27,20,33,25
+189,Liga Profesional Argentina 2023,Arsenal,27,18,34,22
+190,Copa Liga Profesional Argentina 2023,River Plate,12,23,13,23
+191,Copa Liga Profesional Argentina 2023,Independient,12,13,8,22
+192,Copa Liga Profesional Argentina 2023,CA Huracán,12,16,11,20
+193,Copa Liga Profesional Argentina 2023,Banfield,12,9,6,19
+194,Copa Liga Profesional Argentina 2023,Instituto,12,11,7,18
+195,Copa Liga Profesional Argentina 2023,Vélez,12,13,12,18
+196,Copa Liga Profesional Argentina 2023,Colón,12,15,14,17
+197,Copa Liga Profesional Argentina 2023,Rosario,12,12,11,17
+198,Copa Liga Profesional Argentina 2023,Gimnasia,12,12,17,15
+199,Copa Liga Profesional Argentina 2023,Talleres,12,12,10,14
+200,Copa Liga Profesional Argentina 2023,Atl.Tucumán,12,7,9,14
+201,Copa Liga Profesional Argentina 2023,Arsenal,12,9,12,13
+202,Copa Liga Profesional Argentina 2023,Argentinos,12,17,21,12
+203,Copa Liga Profesional Argentina 2023,Barracas,12,9,20,12
+204,Copa Liga Profesional Argentina 2023,Godoy Cruz,12,13,7,21
+205,Copa Liga Profesional Argentina 2023,Central,12,11,11,19
+206,Copa Liga Profesional Argentina 2023,Belgrano,12,15,13,18
+207,Copa Liga Profesional Argentina 2023,Racing Club,12,16,15,18
+208,Copa Liga Profesional Argentina 2023,Platense,12,11,15,16
+209,Copa Liga Profesional Argentina 2023,Newell's,12,11,9,15
+210,Copa Liga Profesional Argentina 2023,Sarmiento,12,8,7,15
+211,Copa Liga Profesional Argentina 2023,Defensa,12,12,12,14
+212,Copa Liga Profesional Argentina 2023,Unión Santa,12,8,9,13
+213,Copa Liga Profesional Argentina 2023,Estudiantes,12,9,12,13
+214,Copa Liga Profesional Argentina 2023,Boca Juniors,12,14,15,12
+215,Copa Liga Profesional Argentina 2023,San Lorenzo,12,8,11,12
+216,Copa Liga Profesional Argentina 2023,Tigre,12,7,11,12
+217,Copa Liga Profesional Argentina 2023,Lanús,12,8,11,11
