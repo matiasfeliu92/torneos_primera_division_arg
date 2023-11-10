@@ -4,3 +4,4 @@ credentials
 secrets.toml
 __pycache__
 GUIA_POSIBLES_ANALITICAS.txt
+google_sheets_credentials
