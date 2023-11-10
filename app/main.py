@@ -21,9 +21,10 @@ df_table_positions = None
 st.set_page_config(layout="wide")
 
 connection=None
+database_url = os.getenv('DATABASE_URL') or st.secrets["DATABASE_URL"]
 with st.spinner('Loading dashboard, please wait...'):
     if not st.button('Update data'):
-        connection = db_connection(str(os.getenv('DATABASE_URL'))).connect()
+        connection = db_connection(str()).connect()
         try:
             if connection is not None:
                 df_tournament_results = pd.read_sql('SELECT * FROM "public"."tournament_results"', con=db_connection(str(os.getenv('DATABASE_URL'))))
