@@ -24,8 +24,8 @@ connection=None
 database_url = os.getenv('DATABASE_URL') or st.secrets["DATABASE_URL"]
 with st.spinner('Loading dashboard, please wait...'):
     if not st.button('Update data'):
-        connection = db_connection(str()).connect()
         try:
+            connection = db_connection(str()).connect()
             if connection is not None:
                 df_tournament_results = pd.read_sql('SELECT * FROM "public"."tournament_results"', con=db_connection(str(os.getenv('DATABASE_URL'))))
                 df_best_players = pd.read_sql('SELECT * FROM "public"."best_players"', con=db_connection(str(os.getenv('DATABASE_URL'))))
