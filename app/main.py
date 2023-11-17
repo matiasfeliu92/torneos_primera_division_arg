@@ -28,7 +28,7 @@ database_url = None
 
 if "IS_STREAMLIT_CLOUD" in os.environ:
     # Estamos en producción en Streamlit Cloud, usar la URL de la nube
-    database_url = config['database']['cloud_url']
+    database_url = st.secrets['DATABASE_URL']
 else:
     # Estamos en desarrollo local, usar la URL local
     database_url = config['database']['local_url']
