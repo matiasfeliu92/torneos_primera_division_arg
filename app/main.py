@@ -14,8 +14,6 @@ import toml
 from db import db_connection
 from utils import get_tournament_results, get_best_players, get_positions_table
 
-config = toml.load('config.toml')
-
 df_url_torneos = pd.read_csv('./CSV/url_torneos.csv')
 df_tournament_results = None
 df_best_players = None
@@ -30,6 +28,7 @@ if "IS_STREAMLIT_CLOUD" in os.environ:
     # Estamos en producción en Streamlit Cloud, usar la URL de la nube
     database_url = st.secrets['DATABASE_URL']
 else:
+    config = toml.load('config.toml')
     # Estamos en desarrollo local, usar la URL local
     database_url = config['database']['local_url']
 
