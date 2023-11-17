@@ -3,8 +3,11 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import datetime
 import os
+import toml
 from dotenv import load_dotenv
 load_dotenv()
+
+config = toml.load('config.toml')
 
 from db import db_connection
 
@@ -12,7 +15,15 @@ df_tournament_results = pd.DataFrame()
 df_best_players = pd.DataFrame()
 df_table_positions = pd.DataFrame()
 
-database_url = os.getenv('DATABASE_URL') or st.secrets["DATABASE_URL"]
+connection=None
+database_url = None
+
+if "IS_STREAMLIT_CLOUD" in os.environ:
+    # Estamos en producción en Streamlit Cloud, usar la URL de la nube
+    database_url = config['database']['cloud_url']
+else:
+    # Estamos en desarrollo local, usar la URL local
+    database_url = config['database']['local_url']
 
 def get_tournament_results(url, torneo):
     global df_tournament_results
@@ -50,7 +61,7 @@ def get_tournament_results(url, torneo):
                 })
     df = pd.DataFrame(results)
     df_tournament_results = pd.concat([df_tournament_results, df], ignore_index=True)
-    df_tournament_results.to_sql('tournament_results', db_connection(str(database_url)), if_exists='replace', index=False)
+    df_tournament_results.to_sql('tournament_results', db_connection(str(database_url)), if_exists='replace', index=False, schema="torneos_primera_arg")
     df_tournament_results.to_csv('./CSV/tournament_results.csv')
     return df_tournament_results
 
@@ -80,7 +91,7 @@ def get_best_players(url, torneo):
                     })
     df = pd.DataFrame(best_players)
     df_best_players = pd.concat([df_best_players, df], ignore_index=True)
-    df_best_players.to_sql('best_players', db_connection(str(database_url)), if_exists='replace', index=False)
+    df_best_players.to_sql('best_players', db_connection(str(database_url)), if_exists='replace', index=False, schema="torneos_primera_arg")
     df_best_players.to_csv('./CSV/best_players.csv')
     return df_best_players
 
@@ -113,6 +124,6 @@ def get_positions_table(url, torneo):
                     })
     df = pd.DataFrame(table_positions)
     df_table_positions = pd.concat([df_table_positions, df], ignore_index=True)
-    df_table_positions.to_sql('table_positions', db_connection(str(database_url)), if_exists='replace', index=False)
+    df_table_positions.to_sql('table_positions', db_connection(str(database_url)), if_exists='replace', index=False, schema="torneos_primera_arg")
     df_table_positions.to_csv('./CSV/table_positions.csv')
     return df_table_positions
