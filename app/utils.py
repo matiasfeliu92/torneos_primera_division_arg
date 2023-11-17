@@ -2,12 +2,11 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 import datetime
+import streamlit as st
 import os
 import toml
 from dotenv import load_dotenv
 load_dotenv()
-
-config = toml.load('config.toml')
 
 from db import db_connection
 
@@ -20,8 +19,9 @@ database_url = None
 
 if "IS_STREAMLIT_CLOUD" in os.environ:
     # Estamos en producción en Streamlit Cloud, usar la URL de la nube
-    database_url = config['database']['cloud_url']
+    database_url = st.secrets['DATABASE_URL']
 else:
+    config = toml.load('config.toml')
     # Estamos en desarrollo local, usar la URL local
     database_url = config['database']['local_url']
 
