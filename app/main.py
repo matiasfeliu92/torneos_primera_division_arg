@@ -8,10 +8,6 @@ import plotly.graph_objects as go
 from matplotlib import pyplot as plt
 from sqlalchemy import text, engine, exc
 import streamlit as st
-from dotenv import load_dotenv
-load_dotenv()
-import toml
-from db import db_connection
 from utils import get_tournament_results, get_best_players, get_positions_table
 
 df_url_torneos = pd.read_csv('./CSV/url_torneos.csv')
@@ -21,33 +17,11 @@ df_table_positions = None
 
 st.set_page_config(layout="wide")
 
-connection=None
-database_url = None
-
-if "IS_STREAMLIT_CLOUD" in os.environ:
-    # Estamos en producción en Streamlit Cloud, usar la URL de la nube
-    database_url = st.secrets['DATABASE_URL']
-else:
-    config = toml.load('./config.toml')
-    # Estamos en desarrollo local, usar la URL local
-    database_url = config['database']['local_url']
-
 with st.spinner('Loading dashboard, please wait...'):
     if not st.button('Update data'):
-        try:
-            connection = db_connection(str(database_url)).connect()
-            if connection is not None:
-                df_tournament_results = pd.read_sql('SELECT * FROM "torneos_primera_arg"."tournament_results"', con=db_connection(str(database_url)))
-                df_best_players = pd.read_sql('SELECT * FROM "torneos_primera_arg"."best_players"', con=db_connection(str(database_url)))
-                df_table_positions = pd.read_sql('SELECT * FROM "torneos_primera_arg"."table_positions"', con=db_connection(str(database_url)))
-        except exc.SQLAlchemyError as e:
-            print("Error al conectar a la base de datos:", e)
-            df_tournament_results = pd.read_csv('./CSV/tournament_results.csv')
-            df_best_players = pd.read_csv('./CSV/best_players.csv')
-            df_table_positions = pd.read_csv('./CSV/table_positions.csv')
-        finally:
-            if connection is not None:
-                connection.close()
+        df_tournament_results = pd.read_csv('./CSV/tournament_results.csv')
+        df_best_players = pd.read_csv('./CSV/best_players.csv')
+        df_table_positions = pd.read_csv('./CSV/table_positions.csv')
     else:
         for index, row in df_url_torneos.iterrows():
             url = row['url']
@@ -59,10 +33,6 @@ with st.spinner('Loading dashboard, please wait...'):
 st.spinner('')
 
 st.title('Torneos de primera division del futbol argentino')
-
-# st.dataframe(df_tournament_results.iloc[0:10])
-# st.dataframe(df_best_players.iloc[0:10])
-# st.dataframe(df_table_positions.iloc[0:10])
 
 select_one_option = st.selectbox('Selecciona una opcion', ['Ninguna', 'Resultados de partidos', 'Los mejores jugadores', 'Posiciones'])
 
