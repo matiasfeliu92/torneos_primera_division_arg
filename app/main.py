@@ -63,7 +63,7 @@ elif select_one_option == 'Posiciones':
                 with columns[i % num_columns]:
                     st.plotly_chart(fig, use_container_width=True)
             elif select_graph_type == 'line_chart':
-                fig = px.line(data, x='equipo', y='puntos', title=torneo, color='equipo', labels={'puntos': 'Puntos'})
+                fig = px.line(data, x='equipo', y='puntos', title=torneo, labels={'puntos': 'Puntos'})
 
                 with columns[i % num_columns]:
                     st.plotly_chart(fig, use_container_width=True)
