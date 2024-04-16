@@ -6,4 +6,5 @@ __pycache__
 GUIA_POSIBLES_ANALITICAS.txt
 google_sheets_credentials
 config.toml
-*.csv
+*Club*.csv
+myenv
