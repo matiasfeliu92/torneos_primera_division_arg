@@ -1,3 +1,4 @@
+import json
 import requests
 from bs4 import BeautifulSoup
 import datetime
@@ -119,6 +120,8 @@ def get_match_data(url):
   away_scorers_list = []
   local_yellow_card_list = []
   list_away_yellow_cards = []
+  statistic_list = None
+  statistic_dict = {}
   for sp in all_spans:
     if 'left' in sp.get('class', []) and 'minutos' not in sp.get('class', []):
       local_scorers = [a.text for a in sp.find_all('a') if 'Gol de' in sp.find('small').text and a != ""]
@@ -134,17 +137,71 @@ def get_match_data(url):
       away_yellow_cards = [a.text for a in sp.find_all('a') if 'T. Amarilla' in sp.find('small').text and a != ""]
       if len(away_yellow_cards) > 0:
         list_away_yellow_cards.append(away_yellow_cards[0])
-  # local_scorers_list = {f"Gol {i+1}": goleador for i, goleador in enumerate(local_scorers_list)}
-  # away_scorers_list = {f"Gol {i+1}": goleador for i, goleador in enumerate(away_scorers_list)}
-  # local_yellow_card_list = {f"T. amarilla {i+1}": goleador for i, goleador in enumerate(local_yellow_card_list)}
-  # list_away_yellow_cards = {f"T. amarilla {i+1}": goleador for i, goleador in enumerate(list_away_yellow_cards)}
+  matchs_statistics = []
+  div_statistic_table = soup.select('div.contentitem table')
+  # print("----------------------------------div_statistic_table-----------------------------------------")
+  # print(div_statistic_table)
+  statistic_table = [table.find('tbody') for table in div_statistic_table] if div_statistic_table else []
+  tr_elements = [tr for table in statistic_table for tr in table.find_all('tr')]
+  # print("LENGHT TRS: ", len(tr_elements))
+  for tr in tr_elements:
+    # print("-------------------------CADA TR-------------------------------")
+    # print(tr.find_all('td')[1].find('h6').text.strip())
+    if tr.find_all('td')[1].find('h6').text.strip() == 'Posesión del balón':
+      statistic_dict['local_ball_position'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_ball_position'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Goles':
+      statistic_dict['local_goals'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_goals'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Tiros a puerta':
+      statistic_dict['local_kicks_to_goals'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_kicks_to_goals'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Tiros fuera':
+      statistic_dict['local_outside_kicks'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_outside_kicks'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Total tiros':
+      statistic_dict['local_total_kicks'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_total_kicks'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Paradas del portero':
+      statistic_dict['local_shortcuts'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_shortcuts'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Saques de esquina':
+      statistic_dict['local_corner_kicks'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_corner_kicks'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Fueras de juego':
+      statistic_dict['local_offside'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_offside'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Tarjetas Rojas':
+      statistic_dict['local_red_cards'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_red_cards'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Asistencias':
+      statistic_dict['local_assists'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_assists'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Tiros al palo':
+      statistic_dict['local_crossbar_kicks'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_crossbar_kicks'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Lesiones':
+      statistic_dict['local_lesions'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_lesions'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Sustituciones':
+      statistic_dict['local_substitutions'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_substitutions'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Faltas':
+      statistic_dict['local_faults'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_faults'] = tr.find_all('td')[2].text.strip()
+    elif tr.find_all('td')[1].find('h6').text.strip() == 'Penalti cometido':
+      statistic_dict['local_commited_penalties'] = tr.find_all('td')[0].text.strip()
+      statistic_dict['away_commited_penalties'] = tr.find_all('td')[2].text.strip()
+  # print("-------------------------statistic_dict-------------------------------")
+  # print(statistic_dict)
   match_data = {
     'tournament': tournament_name[0] if len(tournament_name)>0 else '',
     'score': scores,
     'local_scorers': ', '.join(local_scorers_list) if len(local_scorers_list) > 0 else '',
     'away_scorers': ', '.join(away_scorers_list) if len(away_scorers_list) > 0 else '',
     'local_yellow_cards': ', '.join(local_yellow_card_list) if len(local_yellow_card_list) > 0 else '',
-    'away_yellow_cards': ', '.join(list_away_yellow_cards) if len(list_away_yellow_cards) > 0 else ''
+    'away_yellow_cards': ', '.join(list_away_yellow_cards) if len(list_away_yellow_cards) > 0 else '',
+    'match_statistics': json.dumps(statistic_dict)
   }
   # print(match_data)
   return match_data
@@ -174,7 +231,6 @@ def get_team_data(url):
       matchs_links_td = match_tr.find_all('td', class_='tdinfo')
       links = [link.find('a')['href'] for link in matchs_links_td if link.find('a')]
       match_data = get_match_data(links[0])
-      print("----------------------------------------------------RETURN JSON DATA--------------------------------------------------------")
       combined_data = {
         'date': date[0],
         'status': status[0],
@@ -183,8 +239,5 @@ def get_team_data(url):
         'link': links[0],
         **match_data
       }
-      print(combined_data)
-      print("----------------------------------------------------------------------------------------------------------------------------")
       matchs_data.append(combined_data)
-  print(matchs_data)
   return matchs_data
