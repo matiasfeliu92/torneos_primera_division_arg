@@ -6,7 +6,7 @@ from db import *
 
 df_tournaments = pd.read_csv('../CSV/url_torneos.csv')
 df_teams = pd.read_csv('../CSV/url_equipos.csv')
-df_teams['year'] = df_teams['url'].str[-4:]
+# df_teams['year'] = df_teams['url'].str[-4:]
 for col in df_teams.columns:
     if 'Unnamed' in col:
         df_teams.drop(col, axis=1, inplace=True)
