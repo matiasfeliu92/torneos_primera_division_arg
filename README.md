@@ -5,14 +5,14 @@ Este proyecto tiene como objetivo la extracción de datos de partidos de fútbol
 ## Tecnologías Utilizadas
 
 - **Web Scraping**: Se utilizaron las bibliotecas Requests y Beautiful Soup para la extracción de datos desde las páginas web.
-  ![Requests](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/400px-Python-logo-notext.svg.png)
+  ![Requests](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/300px-Python-logo-notext.svg.png)
   ![Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/_images/6.1.jpg)
 
 - **API**: Se implementó la API utilizando FastAPI.
   ![FastAPI](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png)
 
 - **Base de Datos**: Se empleó PostgreSQL para el almacenamiento de datos, gestionado a través de SQL Alchemy y Psycopg2.
-  ![PostgreSQL](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png)
+  ![PostgreSQL](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/300px-Postgresql_elephant.svg.png)
 
 - **Manipulación de Datos**: Para el proceso de ETL (Extract, Transform, Load), se utilizó la biblioteca Pandas.
   ![Pandas](https://miro.medium.com/max/1024/1*9iu8_mhn6Yzt3G8Pw_rfzA.png)
