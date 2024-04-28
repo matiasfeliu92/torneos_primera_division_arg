@@ -5,7 +5,7 @@ Este proyecto tiene como objetivo la extracción de datos de partidos de fútbol
 ## Tecnologías Utilizadas
 
 - **Web Scraping**: Se utilizaron las bibliotecas Requests y Beautiful Soup para la extracción de datos desde las páginas web.
-  ![Requests](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png)
+  ![Requests](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/400px-Python-logo-notext.svg.png)
   ![Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/_images/6.1.jpg)
 
 - **API**: Se implementó la API utilizando FastAPI.
