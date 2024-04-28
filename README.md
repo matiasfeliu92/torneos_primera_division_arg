@@ -5,7 +5,7 @@ Este proyecto tiene como objetivo la extracción de datos de partidos de fútbol
 ## Tecnologías Utilizadas
 
 - **Web Scraping**: Se utilizaron las bibliotecas Requests y Beautiful Soup para la extracción de datos desde las páginas web.
-  ![Requests](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png)
+  ![Requests](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png)
   ![Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/_images/6.1.jpg)
 
 - **API**: Se implementó la API utilizando FastAPI.
@@ -67,3 +67,27 @@ Para iniciar el servidor de la API y permitir que los usuarios realicen consulta
   ```
   uvicorn main:app --reload
   ```
+
+
+## Documentación de la API
+
+### Obtener enlaces de los equipos
+- **Descripción:** Obtiene los enlaces de los equipos.
+- **Ruta:** `/teams/links`
+- **Método HTTP:** GET
+- **Respuesta Exitosa (200):** Lista de objetos JSON con los enlaces de los equipos.
+
+### Obtener todos los equipos y sus datos de partidos
+- **Descripción:** Obtiene todos los equipos y sus datos de partidos.
+- **Ruta:** `/teams`
+- **Método HTTP:** GET
+- **Respuesta Exitosa (200):** Lista de objetos JSON con los datos de partidos de todos los equipos.
+
+### Obtener equipos y sus datos de partidos para años y códigos específicos
+- **Descripción:** Obtiene los equipos y sus datos de partidos para los años y códigos especificados.
+- **Ruta:** `/teams`
+- **Método HTTP:** POST
+- **Parámetros de la Solicitud:**
+- `years`: Lista de años (ejemplo: `[2023, 2024]`).
+- `codes`: Lista de códigos de equipos (ejemplo: `["ABC", "DEF"]`).
+- **Respuesta Exitosa (200):** Lista de objetos JSON con los datos de partidos de los equipos seleccionados.
