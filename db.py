@@ -1,18 +1,11 @@
 import psycopg2
-from sqlalchemy import create_engine
-from dotenv import load_dotenv
-import os
+from sqlalchemy import create_engine, exc
 
-load_dotenv()
-
-database_url = os.getenv("DATABASE_URL")
-engine = None
-
-try:
-    engine = create_engine('postgresql://matias92:francia92@localhost:5432/exchanges_db')
-    with engine.connect():
-        pass
-except:
-    engine = create_engine(database_url)
-    
-print(engine.url)
+def create_sql_connection(db_uri):
+    engine = None
+    try:
+        engine = create_engine(db_uri)
+        with engine.connect():
+            return engine
+    except exc.SQLAlchemyError as e:
+        print(str(e))
