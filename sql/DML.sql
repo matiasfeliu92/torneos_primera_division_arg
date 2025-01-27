@@ -59,7 +59,6 @@ SELECT team,
 	SUM(CASE WHEN team = winner THEN 1 ELSE 0 END) AS G,
 	SUM(CASE WHEN winner = 'Draw' THEN 1 ELSE 0 END) AS E,
 	SUM(CASE WHEN team <> winner AND winner <> 'Draw' THEN 1 ELSE 0 END) AS P,
-	--SUM(goals) as GOALS,
 	SUM(points) as PTS
 FROM 
 (SELECT 
@@ -70,7 +69,6 @@ FROM
 	--local_goals AS goals,
 	winner
 FROM [torneos_futbol].[all_matchs]
-WHERE [country] = 'Argentina'
 UNION ALL
 SELECT 
     away_team AS team,
@@ -79,9 +77,8 @@ SELECT
     away_points AS points,
 	--away_goals AS goals,
 	winner
-FROM [torneos_futbol].[all_matchs]
-WHERE [country] = 'Argentina') 
+FROM [torneos_futbol].[all_matchs]) 
 as combined
-WHERE year = 2024 AND tournament IN ('primera division argentina')
+WHERE year = 2024 AND tournament IN ('primera')
 GROUP BY team, tournament, year
 ORDER BY PTS DESC;

@@ -18,7 +18,7 @@ CREATE OR ALTER VIEW [torneos_futbol].[all_matchs] AS
 SELECT 
 	[tournament], --NOMBRE TORNEO--
 	[country], --PAIS--
-	[year], --AÑO--
+	[year], --Aï¿½O--
 	[date], --FECHA--
 	[home_team] AS local_team, --EQUIPO LOCAL--
 	[away_team], --EQUIPO VISITANTE--
